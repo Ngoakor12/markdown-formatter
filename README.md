@@ -3,7 +3,7 @@ A tool for writing repeatative stand up reports faster without needing to manual
 <hr>
 ## TO-DO
 <hr>
-- [x] italicise one predefined word<br>
-- [x] italicise a predefined array<br>
-- [ ] italicise a user defined array<br>
-- [ ] add a copy button to the output<br>
+-[x] italicise one predefined word<br>
+-[x] italicise a predefined array<br>
+-[ ] italicise a user defined array<br>
+-[ ] add a copy button to the output<br>
