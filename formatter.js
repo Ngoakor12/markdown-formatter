@@ -4,13 +4,17 @@ let formattedText = document.querySelector("#formattedText");
 
 submit.addEventListener("click", transformText);
 
-let italics = ["started"];
+let italics = ["started", "completed", "worked on"];
 
 function transformText() {
-  let result = text.value.replace(
-    new RegExp(italics[0], "g"),
-    `**${italics[0]}**`
-  );
-  formattedText.innerHTML = result;
-  //   console.log(result);
+  let input = text.value;
+  italics.forEach((word) => {
+    if (input.indexOf(word) !== -1 && input.indexOf(`**${word}**`) === -1)
+      formattedText.innerHTML = input.replace(
+        new RegExp(word, "g"),
+        `**${word}**`
+      );
+    // save previously replaced verbs
+    input = formattedText.innerHTML;
+  });
 }
