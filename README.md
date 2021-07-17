@@ -6,3 +6,4 @@ A tool for writing repeatative stand up reports faster without needing to manual
 - [x] italicise a predefined array<br>
 - [ ] italicise a user defined array<br>
 - [ ] add a copy button to the output<br>
+- [ ] make it pretty
