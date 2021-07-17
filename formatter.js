@@ -14,7 +14,7 @@ function italiciseText() {
       inputText.indexOf(`**${word}**`) === -1
     )
       formattedText.innerHTML = inputText.replace(
-        new RegExp(word, "g"),
+        new RegExp(word, "gi"),
         `**${word}**`
       );
     // update previously replaced verbs
