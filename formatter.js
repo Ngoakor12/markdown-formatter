@@ -6,11 +6,12 @@ let addWords = document.querySelector("#addWords");
 let italicisedArray = document.querySelector("#italicisedArray");
 
 submit.addEventListener("click", italiciseText);
-addWords.addEventListener("click", addWordsToItalicise);
+addWords.addEventListener("click", addWordsToItalicsArray);
 
-let italics = ["started", "completed", "worked on"];
+let italics = [];
+// let italics = ["started", "completed", "worked on"];
 
-function addWordsToItalicise() {
+function addWordsToItalicsArray() {
   wordsToItalicise = Array(wordsToItalicise.value.split(","));
   wordsToItalicise.forEach((input) => {
     italics.push(input);
@@ -19,17 +20,25 @@ function addWordsToItalicise() {
 }
 
 function italiciseText() {
-  let inputText = text.value;
+  console.log(italics);
+  let input = text.value;
   italics.forEach((word) => {
-    if (
-      inputText.indexOf(word) !== -1 &&
-      inputText.indexOf(`**${word}**`) === -1
-    )
-      formattedText.innerHTML = inputText.replace(
-        new RegExp(word, "gi"),
-        `**${word}**`
-      );
-    // update previously replaced verbs
-    inputText = formattedText.innerHTML;
+    // if (input.indexOf(word) !== -1 && input.indexOf(`**${word}**`) === -1)
+    formattedText.innerHTML = input.replace(
+      new RegExp(word, "g"),
+      `**${word}**`
+    );
+    console.log(formattedText.innerHTML);
+    // save previously replaced verbs
+    input = formattedText.innerHTML;
   });
 }
+
+// let a = "I like orange, blue, black, pink, rose, yellow, white, black";
+
+// const b = ["black", "yellow"];
+
+// b.forEach((word) => {
+//   a = a.replace(word, "violet");
+// });
+// console.log(a);
