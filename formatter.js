@@ -9,7 +9,6 @@ submit.addEventListener("click", italiciseText);
 addWords.addEventListener("click", addWordsToItalicsArray);
 
 let italics = [];
-// let italics = ["started", "completed", "worked on"];
 
 function addWordsToItalicsArray() {
   wordsToItalicise = Array(wordsToItalicise.value.split(","));
@@ -23,7 +22,6 @@ function italiciseText() {
   console.log(italics);
   let input = text.value;
   italics.forEach((word) => {
-    // if (input.indexOf(word) !== -1 && input.indexOf(`**${word}**`) === -1)
     formattedText.innerHTML = input.replace(
       new RegExp(word, "g"),
       `**${word}**`
@@ -33,12 +31,3 @@ function italiciseText() {
     input = formattedText.innerHTML;
   });
 }
-
-// let a = "I like orange, blue, black, pink, rose, yellow, white, black";
-
-// const b = ["black", "yellow"];
-
-// b.forEach((word) => {
-//   a = a.replace(word, "violet");
-// });
-// console.log(a);
