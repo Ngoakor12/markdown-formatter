@@ -11,23 +11,22 @@ addWords.addEventListener("click", addWordsToItalicsArray);
 let italics = [];
 
 function addWordsToItalicsArray() {
-  wordsToItalicise = Array(wordsToItalicise.value.split(","));
-  wordsToItalicise.forEach((input) => {
-    italics.push(input);
-  });
+  if (wordsToItalicise.value !== "" || wordsToItalicise.value !== undefined) {
+    if (wordsToItalicise.value.indexOf(",") !== -1) {
+      wordsToItalicise = wordsToItalicise.value.split(",");
+      italics = wordsToItalicise;
+    } else {
+      italics.push(wordsToItalicise.value);
+    }
+  }
   italicisedArray.innerHTML = italics;
 }
 
 function italiciseText() {
-  console.log(italics);
   let input = text.value;
   italics.forEach((word) => {
-    formattedText.innerHTML = input.replace(
-      new RegExp(word, "g"),
-      `**${word}**`
-    );
-    console.log(formattedText.innerHTML);
+    formattedText.value = input.replace(new RegExp(word, "g"), `**${word}**`);
     // save previously replaced verbs
-    input = formattedText.innerHTML;
+    input = formattedText.value;
   });
 }
