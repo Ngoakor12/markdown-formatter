@@ -24,12 +24,14 @@ function italiciseText() {
   const words = getEnteredWords(enteredWords.value);
   let input = inputText.value;
   words.forEach((word) => {
-    formattedText.value = input.replace(
-      new RegExp(`${word}`, "g"),
-      `**${word}**`
-    );
-    // save previously replaced verbs
-    input = formattedText.value;
+    if (inputText.value && words[0] != "") {
+      formattedText.value = input.replace(
+        new RegExp(`${word}`, "g"),
+        `**${word}**`
+      );
+      // save previously replaced verbs
+      input = formattedText.value;
+    }
   });
 }
 
