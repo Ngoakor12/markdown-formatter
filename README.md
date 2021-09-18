@@ -7,5 +7,5 @@ A tool for styling(with markdown) repetative reports(e.g. stand-up) faster for m
 - [x] italicise a predefined array<br>
 - [x] make it possible for users to enter their own words to customize<br>
 - [x] italicise a user defined array<br>
-- [ ] add a copy button to the output<br>
+- [x] add a copy button to the output<br>
 - [ ] make it pretty
