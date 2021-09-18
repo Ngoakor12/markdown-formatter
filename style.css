@@ -1,3 +1,77 @@
-[contenteditable="true"]:empty:before {
-  content: attr(aria-placeholder);
+html {
+  font-size: 62.5%;
 }
+
+body {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+section {
+  width: 100%;
+  padding: 0.5rem;
+}
+p,
+h1,
+h2,
+h3,
+button,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: "Inter";
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 5rem;
+  min-width: 10rem;
+  font-size: 1.8rem;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+div#steps {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+
+textarea,
+button#submit,
+button#copy-button {
+  min-width: 30rem;
+}
+
+input {
+  min-width: 20rem;
+  min-height: 5rem;
+}
+
+main {
+  display: flex;
+}
+section#left,
+section#right {
+  display: flex;
+  flex-direction: column;
+}
+/* button#copy-text {
+  display: block;
+} */

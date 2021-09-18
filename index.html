@@ -4,30 +4,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markdown Formatter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Markdown formatter</h1>
-    <p>
-      Add word(s) or phrase(s) you want to be italicised (separate them with
-      commas)
-    </p>
-    <input type="text" id="entered-words" />
-    <button id="add-words">Add words</button>
-    <p>Italicised words: <span id="italicised-words"></span></p>
-    <p>Stand up report</p>
-    <textarea id="input-text" name="input-text" cols="30" rows="10"></textarea>
-    <br />
-    <p>Formatted text</p>
-    <textarea
-      id="formatted-text"
-      name="formatted-text"
-      cols="30"
-      rows="10"
-    ></textarea
-    ><br />
-    <button id="submit">Format</button>
-    <button id="copy-button">Copy</button>
+    <header>
+      <h1>Markdown formatter</h1>
+      <p>Format your standup reports in three easy steps</p>
+      <div id="steps">
+        <p>1. Add words to italicise</p>
+        <p>2. Paste your report and format</p>
+        <p>3. Copy the result and use as you please</p>
+      </div>
+    </header>
+    <main>
+      <section id="left-section">
+        <h2>Markdown styling</h2>
+        <label for="entered-words">
+          <h3>Italicise <span>(Enter comma separated words/phrases)</span></h3>
+          <input type="text" id="entered-words" />
+        </label>
+        <button id="add-words">Add</button>
+        <div>
+          <p>Italicised:</p>
+          <span id="italicised-words"></span>
+        </div>
+      </section>
+      <section id="right-section">
+        <section class="">
+          <label for="input-text">
+            <h2>Input</h2>
+            <textarea id="input-text" name="input-text"></textarea></label
+          ><br />
+          <button id="submit">Format</button>
+        </section>
+        <section>
+          <label for="formatted-text">
+            <h2>Output</h2>
+            <textarea
+              id="formatted-text"
+              name="formatted-text"
+            ></textarea></label
+          ><br />
+          <button id="copy-button">Copy</button>
+        </section>
+      </section>
+    </main>
     <script src="./formatter.js"></script>
   </body>
 </html>
