@@ -55,9 +55,14 @@ h2 {
 }
 h3 {
   font-size: 1.8rem;
-  width: 30rem;
+  min-width: 40rem;
   margin-bottom: 1.8rem;
 }
+#h3-brackets {
+  font-weight: 400;
+  min-width: 40rem;
+}
+
 #italicised-array {
   margin-top: 1.8rem;
   min-width: 40rem;
