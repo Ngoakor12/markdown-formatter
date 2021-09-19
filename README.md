@@ -8,4 +8,4 @@ A tool for styling(with markdown) repetative reports(e.g. stand-up) faster for m
 - [x] make it possible for users to enter their own words to customize<br>
 - [x] italicise a user defined array<br>
 - [x] add a copy button to the output<br>
-- [ ] make it pretty
+- [x] make it pretty
