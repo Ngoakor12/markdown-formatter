@@ -11,8 +11,8 @@ body {
   width: 100%;
 }
 section {
-  width: 100%;
-  padding: 0.5rem;
+  /* width: 100%; */
+  /* padding: 0.5rem; */
 }
 p,
 h1,
@@ -39,7 +39,9 @@ header {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 4.8rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 
 div#steps {
@@ -48,29 +50,98 @@ div#steps {
 
 h2 {
   font-size: 2.4rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 h3 {
   font-size: 1.8rem;
+  width: 30rem;
+  margin-bottom: 1.8rem;
+}
+#italicised-array {
+  margin-top: 1.8rem;
+  min-width: 40rem;
 }
 
 textarea,
 button#submit,
 button#copy-button {
-  min-width: 30rem;
+  min-width: 40rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+label.entered-words {
+  /* outline: 1px solid red; */
+  position: relative;
+}
+button#add-words {
+  margin: 0;
+  /* outline: 1px solid red; */
+  position: absolute;
+  top: auto;
+  left: auto;
+  border: 0.1rem solid black;
+  border-radius: 0.4rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+button {
+  color: white;
+  border: 0;
+  border-radius: 0.4rem;
+  background-color: black;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 input {
-  min-width: 20rem;
+  min-width: 30rem;
   min-height: 5rem;
+  border-radius: 0.4rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  /* outline: 1px solid red; */
+  border: 0.1rem solid black;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+/* input:focus {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+} */
+textarea {
+  border-radius: 0.4rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  min-height: 20rem;
+  min-width: 40rem;
+  padding: 1rem;
+  font-family: Inter;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 main {
+  /* width: 100%; */
   display: flex;
+  padding: 5rem;
+  /* align-content: center; */
+  justify-content: center;
+  /* margin-top: 4rem; */
+  margin: 4rem;
+  width: 92rem;
+  margin: auto;
 }
 section#left,
 section#right {
-  display: flex;
-  flex-direction: column;
+  width: 3rem;
+  overflow: hidden;
+}
+section#left-section {
+  margin-right: 12rem;
 }
 /* button#copy-text {
   display: block;
