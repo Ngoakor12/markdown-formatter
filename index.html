@@ -25,13 +25,16 @@
     <main>
       <section id="left-section">
         <h2>Markdown styling</h2>
-        <label for="entered-words">
-          <h3>Italicise <span>(Enter comma separated words/phrases)</span></h3>
+        <label for="entered-words" class="entered-words">
+          <h3>
+            Italicise
+            <span id="h3-brackets">(Enter comma separated words/phrases)</span>
+          </h3>
           <input type="text" id="entered-words" />
+          <button id="add-words">Add</button>
         </label>
-        <button id="add-words">Add</button>
         <div>
-          <p>Italicised:</p>
+          <p id="italicised-array">Italicised:</p>
           <span id="italicised-words"></span>
         </div>
       </section>
