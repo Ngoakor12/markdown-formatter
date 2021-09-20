@@ -27,7 +27,7 @@ function italiciseText() {
     if (inputText.value && words[0] != "") {
       formattedText.value = input.replace(
         new RegExp(`${word}`, "g"),
-        `**${word}**`
+        `*${word}*`
       );
       // save previously replaced verbs
       input = formattedText.value;
