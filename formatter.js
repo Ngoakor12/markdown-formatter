@@ -5,6 +5,7 @@ let enteredWords = document.querySelector("#entered-words");
 const addWordsButton = document.querySelector("#add-words");
 let italiciseWords = document.querySelector("#italicised-words");
 const copyButton = document.querySelector("#copy-button");
+let markdownPreviewText = document.querySelector("#markdown-section");
 
 submitButton.addEventListener("click", italiciseText);
 addWordsButton.addEventListener("click", displayWords);
@@ -33,6 +34,8 @@ function italiciseText() {
       input = formattedText.value;
     }
   });
+  const result = marked(formattedText.value);
+  markdownPreviewText.innerHTML = result;
 }
 
 function copyText() {
