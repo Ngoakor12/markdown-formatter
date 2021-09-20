@@ -141,11 +141,11 @@ main {
   max-width: 92rem;
   margin: auto;
 }
-section#left,
+/* section#left,
 section#right {
-  min-width: 3rem;
-  overflow: hidden;
-}
+   min-width: 3rem;
+  overflow: hidden; 
+} */
 section#left-section {
   margin-right: 12rem;
 }
@@ -155,7 +155,7 @@ section#left-section {
 #markdown-section {
   /* display: block; */
   border-radius: 0.4rem;
-  width: 40rem;
+  min-width: 40rem;
   min-height: 79rem;
   background-color: rgb(240, 240, 240);
   padding: 1rem;
