@@ -17,24 +17,28 @@ function displayWords() {
 }
 
 function getEnteredWords(wordsArray) {
-  const words = wordsArray.split(",");
-  return words;
+  if (wordsArray) {
+    const words = wordsArray.split(",");
+    return words;
+  }
 }
 
 function italiciseText() {
-  const words = getEnteredWords(enteredWords.value);
+  const words = getEnteredWords(italiciseWords.innerHTML);
   let input = inputText.value;
-  words.forEach((word) => {
-    if (inputText.value && words[0] != "") {
-      formattedText.value = input.replace(
-        new RegExp(`${word}`, "g"),
-        `*${word}*`
-      );
-      // save previously replaced verbs
-      input = formattedText.value;
-    }
-  });
-  const result = marked(formattedText.value);
+  if (words) {
+    words.forEach((word) => {
+      if (inputText.value && words[0] != "") {
+        formattedText.value = input.replace(
+          new RegExp(`${word}`, "g"),
+          `*${word}*`
+        );
+        // save previously replaced verbs
+        input = formattedText.value;
+      }
+    });
+  }
+  const result = marked(input);
   markdownPreviewText.innerHTML = result;
 }
 
