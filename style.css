@@ -179,3 +179,15 @@ input:focus,
 textarea:focus {
   background: none;
 }
+
+.enteredWord {
+  display: inline-block;
+  color: white;
+  background-color: black;
+  padding: 0.2rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 2rem;
+}
+.enteredWord:hover {
+  cursor: pointer;
+}
