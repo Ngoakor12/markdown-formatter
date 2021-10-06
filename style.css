@@ -9,25 +9,17 @@ html {
 }
 
 body {
-  /* font-family: "Inter"; */
   font-weight: 400;
   font-size: 1.8rem;
   width: 100%;
   padding: 2rem;
-  /* display: flex;
-  justify-content: center; */
-}
-main {
-  /* max-width: 92rem; */
-  /* display: flex;
-  justify-content: center; */
-  /* padding: 5rem 0 6rem 0; */
-  /* margin: auto; */
 }
 
-/* header {
-  text-align: center;
-} */
+main {
+  width: 100%;
+  min-width: 36rem;
+  margin-bottom: 10rem;
+}
 
 h1 {
   font-size: 4.8rem;
@@ -44,47 +36,45 @@ h2 {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
+
 h3 {
   margin-bottom: 1.8rem;
 }
+
 #h3-brackets {
   font-weight: 400;
-  /* min-width: 40rem; */
 }
 
 #italicised-array {
   margin-top: 1.8rem;
-  /* min-width: 40rem; */
 }
 
-textarea,
-button#submit,
-button#copy-button {
-  /* max-width: 40rem; */
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-label.entered-words {
-  /* outline: 1px solid red; */
-  position: relative;
-}
-/* button#add-words {
-  margin: 0;
-  position: absolute;
-  top: auto;
-  left: auto;
-  border: 0.1rem solid black;
-  border-radius: 0.4rem;
-  border-top-left-radius: 0;
+textarea {
   border-bottom-left-radius: 0;
-} */
+  border-bottom-right-radius: 0;
+  min-height: 20rem;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid black;
+  background-color: rgb(245, 245, 245);
+}
+
+input:focus,
+textarea:focus {
+  background: none;
+}
 
 button {
-  /* font-family: "Inter"; */
   font-weight: 700;
   text-transform: uppercase;
   min-height: 5rem;
-  min-width: 10rem;
   font-size: 1.8rem;
   color: white;
   background-color: black;
@@ -96,62 +86,38 @@ button:hover {
   cursor: pointer;
 }
 
-input {
-  /* min-width: 30rem; */
-  /* min-height: 5rem; */
-  border-radius: 0.4rem;
+input#entered-words {
+  width: 80%;
+  height: 5rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  /* outline: 1px solid red; */
-  border: 0.1rem solid black;
-  padding: 1rem;
-  font-size: 1.8rem;
 }
 
-textarea {
-  border-radius: 0.4rem;
+label.entered-words {
+  position: relative;
+}
+
+button#add-words {
+  border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  /* min-height: 20rem;
-  min-width: 40rem; */
-  padding: 1rem;
-  /* font-family: Inter; */
-  font-size: 1.8rem;
-  font-weight: 400;
-  background-color: rgb(240, 240, 240);
+  min-width: 25%;
+  position: absolute;
+  top: auto;
+  left: auto;
 }
 
-section#left-section {
-  /* margin-right: 12rem; */
+button#submit,
+button#copy-button {
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
-/* button#copy-text {
-  display: block;
-} */
-#markdown-section {
-  /* display: block; */
+
+div#markdown-section {
   border-radius: 0.4rem;
-  /* min-width: 40rem; */
-  /* min-height: 79rem; */
-  background-color: rgb(245, 245, 245);
   padding: 1rem;
-  /* overflow: scroll; */
-}
-/* #markdown-section > * {
-  max-width: 40rem;
-} */
-/* div#markdown-preview {
-  display: block;
-  width: 40rem;
-  height: 40rem;
-  background-color: wheat;
-} */
-input,
-textarea {
+  min-height: 30rem;
   background-color: rgb(245, 245, 245);
-}
-input:focus,
-textarea:focus {
-  background: none;
 }
 
 .enteredWord {
@@ -167,31 +133,27 @@ textarea:focus {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 640px) {
+@media (min-width: 740px) {
   header {
     text-align: center;
   }
-
-  body {
-    display: flex;
-    justify-content: center;
-    /* align-content: center; */
-    flex-direction: column;
-    margin: auto;
-  }
-
   main {
     max-width: 92rem;
     display: flex;
-    justify-content: center;
     gap: 5rem;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 10rem;
   }
   main > * {
     flex: 1 1 0;
   }
-
-  section#left-section {
-  }
+  /* section#left-section,
   section#right-section {
+    width: 50%;
+  } */
+
+  div#markdown-section {
+    min-height: 91%;
   }
 }
