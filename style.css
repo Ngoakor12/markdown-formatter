@@ -1,42 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Inter";
+  /* font-family: "Inter"; */
   font-weight: 400;
   font-size: 1.8rem;
-  margin: 0;
-  padding: 0;
   width: 100%;
+  padding: 2rem;
+  /* display: flex;
+  justify-content: center; */
 }
-/* section {
-  width: 100%;
-  padding: 0.5rem;
-} */
-p,
-h1,
-h2,
-h3,
-button,
-input,
-textarea {
-  margin: 0;
-  padding: 0;
+main {
+  /* max-width: 92rem; */
+  /* display: flex;
+  justify-content: center; */
+  /* padding: 5rem 0 6rem 0; */
+  /* margin: auto; */
 }
 
-button {
-  font-family: "Inter";
-  font-weight: 700;
-  text-transform: uppercase;
-  min-height: 5rem;
-  min-width: 10rem;
-  font-size: 1.8rem;
-}
-
-header {
+/* header {
   text-align: center;
-}
+} */
 
 h1 {
   font-size: 4.8rem;
@@ -54,24 +45,22 @@ h2 {
   margin-bottom: 2rem;
 }
 h3 {
-  font-size: 1.8rem;
-  min-width: 40rem;
   margin-bottom: 1.8rem;
 }
 #h3-brackets {
   font-weight: 400;
-  min-width: 40rem;
+  /* min-width: 40rem; */
 }
 
 #italicised-array {
   margin-top: 1.8rem;
-  min-width: 40rem;
+  /* min-width: 40rem; */
 }
 
 textarea,
 button#submit,
 button#copy-button {
-  min-width: 40rem;
+  /* max-width: 40rem; */
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -79,9 +68,8 @@ label.entered-words {
   /* outline: 1px solid red; */
   position: relative;
 }
-button#add-words {
+/* button#add-words {
   margin: 0;
-  /* outline: 1px solid red; */
   position: absolute;
   top: auto;
   left: auto;
@@ -89,13 +77,19 @@ button#add-words {
   border-radius: 0.4rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
+} */
 
 button {
+  /* font-family: "Inter"; */
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 5rem;
+  min-width: 10rem;
+  font-size: 1.8rem;
   color: white;
-  border: 0;
-  border-radius: 0.4rem;
   background-color: black;
+  border-radius: 0.4rem;
+  border: 0;
 }
 
 button:hover {
@@ -103,8 +97,8 @@ button:hover {
 }
 
 input {
-  min-width: 30rem;
-  min-height: 5rem;
+  /* min-width: 30rem; */
+  /* min-height: 5rem; */
   border-radius: 0.4rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -113,42 +107,22 @@ input {
   padding: 1rem;
   font-size: 1.8rem;
 }
-/* input:focus {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-} */
+
 textarea {
   border-radius: 0.4rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  min-height: 20rem;
-  min-width: 40rem;
+  /* min-height: 20rem;
+  min-width: 40rem; */
   padding: 1rem;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 1.8rem;
   font-weight: 400;
   background-color: rgb(240, 240, 240);
 }
 
-main {
-  /* width: 100%; */
-  display: flex;
-  /* padding: 5rem; */
-  /* align-content: center; */
-  justify-content: center;
-  /* margin-top: 4rem; */
-  padding: 5rem 0 6rem 0;
-  /* margin: 5rem 10rem 6rem 10rem; */
-  max-width: 92rem;
-  margin: auto;
-}
-/* section#left,
-section#right {
-   min-width: 3rem;
-  overflow: hidden; 
-} */
 section#left-section {
-  margin-right: 12rem;
+  /* margin-right: 12rem; */
 }
 /* button#copy-text {
   display: block;
@@ -156,8 +130,8 @@ section#left-section {
 #markdown-section {
   /* display: block; */
   border-radius: 0.4rem;
-  min-width: 40rem;
-  min-height: 79rem;
+  /* min-width: 40rem; */
+  /* min-height: 79rem; */
   background-color: rgb(245, 245, 245);
   padding: 1rem;
   /* overflow: scroll; */
@@ -190,4 +164,34 @@ textarea:focus {
 }
 .enteredWord:hover {
   cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 640px) {
+  header {
+    text-align: center;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    flex-direction: column;
+    margin: auto;
+  }
+
+  main {
+    max-width: 92rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  main > * {
+    flex: 1 1 0;
+  }
+
+  section#left-section {
+  }
+  section#right-section {
+  }
 }
