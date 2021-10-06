@@ -96,8 +96,15 @@ function italiciseText() {
     });
   }
   formattedText.value = input;
-  const result = marked(input);
-  markdownPreviewText.innerHTML = result;
+  // display each line on a new line
+  const formattedWordsArr = formattedText.value.split(/\n/);
+  console.log(formattedWordsArr);
+  // clear previous text
+  markdownPreviewText.innerHTML = "";
+  formattedWordsArr.forEach((line) => {
+    const result = marked(line);
+    markdownPreviewText.innerHTML += result;
+  });
 }
 
 function copyText() {
