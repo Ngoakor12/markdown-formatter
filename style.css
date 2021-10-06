@@ -148,10 +148,6 @@ div#markdown-section {
   main > * {
     flex: 1 1 0;
   }
-  /* section#left-section,
-  section#right-section {
-    width: 50%;
-  } */
 
   div#markdown-section {
     min-height: 91%;
