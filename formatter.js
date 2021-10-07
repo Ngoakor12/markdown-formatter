@@ -8,10 +8,16 @@ const copyButton = document.querySelector("#copy-button");
 let markdownPreviewText = document.querySelector("#markdown-section");
 let enteredWordsArray = document.querySelectorAll(".enteredWord");
 let words = [];
+const inputButton = document.querySelector("#inputBtn");
+const outputButton = document.querySelector("#outputBtn");
+const inputSection = document.querySelector("#inputSection");
+const outputSection = document.querySelector("#outputSection");
 
 submitButton.addEventListener("click", italiciseText);
 addWordsButton.addEventListener("click", addWords);
 copyButton.addEventListener("click", copyText);
+inputButton.addEventListener("click", displayInputSection);
+outputButton.addEventListener("click", displayOutputSection);
 
 function getArray(wordsArray) {
   if (wordsArray) {
@@ -105,9 +111,47 @@ function italiciseText() {
     const result = marked(line);
     markdownPreviewText.innerHTML += result;
   });
+  displayOutputSection();
 }
 
 function copyText() {
   formattedText.select();
   navigator.clipboard.writeText(formattedText.value);
+}
+
+function displayOutputSection() {
+  outputButton.style.backgroundColor = "white";
+  outputButton.style.color = "black";
+  outputButton.style.borderBottom = "none";
+  outputSection.style.visibility = "visible";
+  inputButton.style.backgroundColor = "rgb(250, 250, 250)";
+  inputButton.style.borderBottom = "1px solid black";
+  inputSection.style.visibility = "hidden";
+  inputButton.style.color = "rgb(121, 121, 121)";
+
+  focusOnTextbox(formattedText);
+}
+
+function displayInputSection() {
+  inputButton.style.color = "black";
+  inputButton.style.backgroundColor = "white";
+  inputButton.style.borderBottom = "none";
+  inputSection.style.visibility = "visible";
+  outputButton.style.color = "rgb(121, 121, 121)";
+  outputButton.style.borderBottom = "1px solid black";
+  outputButton.style.backgroundColor = "rgb(250, 250, 250)";
+  outputSection.style.visibility = "hidden";
+
+  focusOnTextbox(inputText);
+}
+
+function focusOnTextbox(textBox) {
+  textBox.focus();
+  if (textBox.value) {
+    // Set text-selection to end
+    textBox.SelectionStart =
+      textBox.Text.length == 0 ? 0 : textBox.Text.length - 1;
+    // Set text-selection length (in your case 0 = no blue text)
+    textBox.SelectionLength = 0;
+  }
 }

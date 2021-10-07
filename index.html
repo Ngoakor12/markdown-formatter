@@ -45,27 +45,29 @@
             </span>
           </div>
         </section>
-        <section class="">
-          <label for="input-text">
-            <h2>Input</h2>
-            <textarea
-              id="input-text"
-              name="input-text"
-              placeholder="start jasmine unit testing..."
-            ></textarea></label
-          ><br />
-          <button id="submit">Format</button>
-        </section>
-        <section>
-          <label for="formatted-text">
-            <h2>Output</h2>
-            <textarea
-              id="formatted-text"
-              name="formatted-text"
-              placeholder="*start* jasmine unit testing..."
-            ></textarea></label
-          ><br />
-          <button id="copy-button">Copy</button>
+        <section id="editingSection">
+          <button id="inputBtn" class="activeButton">Input</button>
+          <button id="outputBtn">Markdown</button>
+          <section id="inputSection" class="activeTab">
+            <label for="input-text">
+              <textarea
+                id="input-text"
+                name="input-text"
+                placeholder="start jasmine unit testing..."
+              ></textarea></label
+            ><br />
+            <button id="submit">Format</button>
+          </section>
+          <section id="outputSection">
+            <label for="formatted-text">
+              <textarea
+                id="formatted-text"
+                name="formatted-text"
+                placeholder="*start* jasmine unit testing..."
+              ></textarea></label
+            ><br />
+            <button id="copy-button">Copy</button>
+          </section>
         </section>
       </section>
       <section id="right-section">
