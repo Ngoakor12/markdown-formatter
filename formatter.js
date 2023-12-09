@@ -108,7 +108,7 @@ function italiciseText() {
   // clear previous text
   markdownPreviewText.innerHTML = "";
   formattedWordsArr.forEach((line) => {
-    const result = marked(line);
+    const result = marked.parse(line);
     markdownPreviewText.innerHTML += result;
   });
   displayOutputSection();
